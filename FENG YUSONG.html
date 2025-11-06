@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Warming: Our Planet in Crisis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1a6b3b, #2a9d8f);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background-color: #264653;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-item:hover {
+            background-color: #2a9d8f;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #264653;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e9c46a;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+            color: #2a9d8f;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+        }
+        
+        .image-card {
+            flex-basis: 48%;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .image-caption {
+            padding: 1rem;
+            background-color: #f8f9fa;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            margin: 1.5rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .audio-section {
+            background-color: #e9f5db;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 1rem;
+            outline: none;
+        }
+        
+        .audio-description {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .links-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .link-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        
+        .link-card h3 {
+            color: #264653;
+            margin-bottom: 0.5rem;
+        }
+        
+        .link-card a {
+            color: #2a9d8f;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        
+        .link-card a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: #264653;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            flex-basis: 22%;
+            min-width: 200px;
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e76f51;
+            margin-bottom: 0.5rem;
+        }
+        
+        .call-to-action {
+            background: linear-gradient(to right, #2a9d8f, #1a6b3b);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e9c46a;
+            color: #264653;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn:hover {
+            background-color: #f4a261;
+        }
+        
+        .carbon-calculator {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            display: none;
+        }
+        
+        .carbon-calculator.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .calculator-result {
+            background-color: #e9f5db;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .calculator-result.active {
+            display: block;
+        }
+        
+        .interview-transcript {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+        
+        .interview-transcript h4 {
+            color: #264653;
+            margin-bottom: 1rem;
+        }
+        
+        .interview-transcript p {
+            margin-bottom: 1rem;
+        }
+        
+        .qa-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .question {
+            font-weight: bold;
+            color: #2a9d8f;
+            margin-bottom: 0.5rem;
+        }
+        
+        .answer {
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .image-card {
+                flex-basis: 100%;
+            }
+            
+            .stat-item {
+                flex-basis: 45%;
+            }
+            
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stat-item {
+                flex-basis: 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-item {
+                margin: 0.25rem 0;
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Global Warming: Our Planet in Crisis</h1>
+            <p class="subtitle">Understanding the facts, taking action, protecting our home</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#overview" class="nav-item"><i class="fas fa-globe-americas"></i> Overview</a>
+            <a href="#causes" class="nav-item"><i class="fas fa-industry"></i> Causes</a>
+            <a href="#effects" class="nav-item"><i class="fas fa-exclamation-triangle"></i> Effects</a>
+            <a href="#solutions" class="nav-item"><i class="fas fa-solar-panel"></i> Solutions</a>
+            <a href="#resources" class="nav-item"><i class="fas fa-link"></i> Resources</a>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="overview">
+            <h2><i class="fas fa-info-circle"></i> Global Warming Overview</h2>
+            <p>Global warming refers to the long-term heating of Earth's climate system observed since the pre-industrial period due to human activities, primarily fossil fuel burning, which increases heat-trapping greenhouse gas levels in Earth's atmosphere.</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">+1.2°C</div>
+                    <p>Global average temperature increase since pre-industrial times</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">415 ppm</div>
+                    <p>Atmospheric CO2 concentration (280ppm before industrialization)</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50%</div>
+                    <p>Arctic summer sea ice loss over past 40 years</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3.6 mm/yr</div>
+                    <p>Global sea level rise per year</p>
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1569163139394-de44cb54d0c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Drought-stricken land">
+                    <div class="image-caption">
+                        <p>Extreme drought leads to crop failure and food crises</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Deforestation">
+                    <div class="image-caption">
+                        <p>Deforestation reduces Earth's natural capacity to absorb CO2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="causes">
+            <h2><i class="fas fa-fire"></i> Main Causes of Global Warming</h2>
+            <p>The primary driver of global warming is the increased concentration of greenhouse gases in the atmosphere, which trap heat and cause the planet to warm. Human influence including emissions such as carbon dioxide, methane and nitrous oxide is considered the main cause of warming since the mid-20th century.</p>
+            
+            <div class="image-container">
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Industrial emissions">
+                    <div class="image-caption">
+                        <p>Industrial activity is a major source of greenhouse gas emissions</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1627437406357-ffffffe8d2d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Transportation emissions">
+                    <div class="image-caption">
+                        <p>Transportation is a major contributor to carbon emissions</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Other significant factors include agricultural activities (especially methane from livestock), industrial processes, and waste management. These activities collectively cause a dramatic increase in greenhouse gas concentrations. The global surface temperature has risen about 0.74°C between 1906 and 2005.</p>
+        </section>
+        
+        <section id="effects">
+            <h2><i class="fas fa-radiation-alt"></i> Effects and Consequences</h2>
+            <p>Global warming has already profoundly impacted Earth's ecosystems and human societies, with effects accelerating and becoming more severe.</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/G4H1N_yXBiA" title="Effects of Global Warming" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <p>Major impacts include: polar ice melt leading to sea level rise; more frequent and intense extreme weather events (heatwaves, droughts, floods, storms); biodiversity loss; threats to agricultural production; and increased human health risks.</p>
+            
+            <div class="image-container">
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1615796153287-98eacf0abb13?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Melting glacier">
+                    <div class="image-caption">
+                        <p>Accelerated melting of glaciers contributes to sea level rise</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1507005399846-93bac4a7e63e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Wildfires">
+                    <div class="image-caption">
+                        <p>Wildfires release carbon dioxide and other greenhouse gases</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="audio-section">
+                <h3>Climate Scientist Interview: Is Climate Change Unstoppable?</h3>
+                <p>Listen to this insightful interview about climate change challenges and solutions.</p>
+                
+                <!-- Using the provided archive.org audio -->
+                <audio controls>
+                    <source src="https://archive.org/download/IsClimateChangeUnstoppable/ES_Garrett.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element. We recommend using Chrome, Firefox, or Safari for the best experience.
+                </audio>
+                
+                <p class="audio-description">This interview discusses whether climate change is an unstoppable force and what can be done to address it.</p>
+                
+                <div class="interview-transcript">
+                    <h4>Interview Discussion Points</h4>
+                    <div class="qa-item">
+                        <div class="question">Interviewer: Is climate change truly unstoppable at this point?</div>
+                        <div class="answer">Scientist: While the changes we're seeing are significant and will continue for some time due to past emissions, it's not accurate to say climate change is completely unstoppable. What we're facing is a question of degree - how much warming we'll ultimately experience. The more decisive action we take now, the more manageable the impacts will be.</div>
+                    </div>
+                    
+                    <div class="qa-item">
+                        <div class="question">Interviewer: What gives you hope that we can still make a difference?</div>
+                        <div class="answer">Scientist: The rapid advancement of renewable energy technologies is incredibly promising. The cost of solar and wind power has decreased dramatically in recent years, making them increasingly competitive with fossil fuels. We're also seeing unprecedented global cooperation and public awareness about this issue.</div>
+                    </div>
+                    
+                    <div class="qa-item">
+                        <div class="question">Interviewer: What are the most critical actions needed right now?</div>
+                        <div class="answer">Scientist: We need to accelerate the transition to clean energy, enhance energy efficiency across all sectors, protect and restore natural carbon sinks like forests, and invest in climate resilience. International cooperation is essential, as climate change is a global problem requiring global solutions.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="solutions">
+            <h2><i class="fas fa-hands-helping"></i> Solutions to Global Warming</h2>
+            <p>Although the challenge of global warming is daunting, we can still take action to mitigate its effects and adapt to changes already occurring. The core of the problem - fossil fuel emissions - is well known and largely uncontested in the scientific community.</p>
+            
+            <div class="image-container">
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Renewable energy">
+                    <div class="image-caption">
+                        <p>Transitioning to solar, wind and other renewables is a key solution</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Reforestation">
+                    <div class="image-caption">
+                        <p>Reforestation and forest conservation help absorb atmospheric CO2</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Individual actions include: reducing energy consumption; choosing sustainable transportation; reducing meat consumption; supporting eco-friendly products and businesses; and participating in environmental advocacy. Governments and businesses need to invest in clean energy, implement strict environmental policies, and promote green technology innovation.</p>
+            
+            <div class="call-to-action">
+                <h3>Take Action Today</h3>
+                <p>As climate scientists warn, we cannot wait any longer. "Stopping further warming requires rapid reductions in greenhouse gas emissions," said Samantha Burgess, deputy director of the Copernicus Climate Change Service.</p>
+                <button id="calculateBtn" class="btn">Calculate Your Carbon Footprint</button>
+            </div>
+            
+            <div id="carbonCalculator" class="carbon-calculator">
+                <h3>Carbon Footprint Calculator</h3>
+                <p>Estimate your personal carbon footprint by answering a few questions about your lifestyle.</p>
+                
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="transportation">Monthly kilometers driven:</label>
+                        <input type="number" id="transportation" min="0" value="800">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="electricity">Monthly electricity usage (kWh):</label>
+                        <input type="number" id="electricity" min="0" value="300">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="diet">Diet type:</label>
+                        <select id="diet">
+                            <option value="vegan">Vegan</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="meatLover" selected>Meat lover</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="flights">Flights per year:</label>
+                        <input type="number" id="flights" min="0" value="2">
+                    </div>
+                </div>
+                
+                <button id="calculateFootprint" class="btn">Calculate My Footprint</button>
+                
+                <div id="calculatorResult" class="calculator-result">
+                    <h4>Your Estimated Carbon Footprint</h4>
+                    <p id="resultText">Based on your inputs, your estimated annual carbon footprint is <span id="footprintValue">0</span> tons of CO2 equivalent.</p>
+                    <p id="comparisonText"></p>
+                    <div id="recommendations"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="resources">
+            <h2><i class="fas fa-external-link-alt"></i> Additional Resources</h2>
+            <p>Here are some authoritative organizations and resources to help you learn more about global warming and get involved in solutions.</p>
+            
+            <div class="links-container">
+                <div class="link-card">
+                    <h3>Intergovernmental Panel on Climate Change (IPCC)</h3>
+                    <p>The United Nations body for assessing the science related to climate change.</p>
+                    <a href="https://www.ipcc.ch" target="_blank">Visit Website <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>NASA Climate Change</h3>
+                    <p>Vital information and data about Earth's changing climate from NASA.</p>
+                    <a href="https://climate.nasa.gov" target="_blank">Visit Website <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>Copernicus Climate Change Service</h3>
+                    <p>Provides climate data and monitoring for Europe and globally.</p>
+                    <a href="https://climate.copernicus.eu" target="_blank">Visit Website <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>UNESCO Sustainability Education</h3>
+                    <p>Education for Sustainable Development empowers people with knowledge to protect our planet.</p>
+                    <a href="https://www.unesco.org/en/sustainable-development/education" target="_blank">Visit Website <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <!-- Removed copyright and educational purpose text as requested -->
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Simple animation for statistics
+        window.addEventListener('load', function() {
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+            });
+            
+            setTimeout(() => {
+                statItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.transition = 'opacity 0.5s, transform 0.5s';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+            }, 500);
+        });
+
+        // Carbon footprint calculator functionality
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const calculator = document.getElementById('carbonCalculator');
+            calculator.classList.toggle('active');
+            
+            if (calculator.classList.contains('active')) {
+                this.textContent = 'Hide Calculator';
+            } else {
+                this.textContent = 'Calculate Your Carbon Footprint';
+            }
+        });
+        
+        document.getElementById('calculateFootprint').addEventListener('click', function() {
+            // Get values from form
+            const transportation = parseInt(document.getElementById('transportation').value) || 0;
+            const electricity = parseInt(document.getElementById('electricity').value) || 0;
+            const diet = document.getElementById('diet').value;
+            const flights = parseInt(document.getElementById('flights').value) || 0;
+            
+            // Calculate carbon footprint (simplified calculation)
+            let footprint = 0;
+            
+            // Transportation: assume 0.2 kg CO2 per km
+            footprint += transportation * 12 * 0.2;
+            
+            // Electricity: assume 0.5 kg CO2 per kWh
+            footprint += electricity * 12 * 0.5;
+            
+            // Diet: different multipliers
+            const dietMultipliers = {
+                vegan: 1,
+                vegetarian: 1.5,
+                meatLover: 2.5
+            };
+            footprint *= dietMultipliers[diet];
+            
+            // Flights: assume 200 kg CO2 per flight
+            footprint += flights * 200;
+            
+            // Convert to tons
+            footprint = Math.round(footprint / 1000);
+            
+            // Display result
+            document.getElementById('footprintValue').textContent = footprint;
+            document.getElementById('calculatorResult').classList.add('active');
+            
+            // Add comparison text
+            const comparisonText = document.getElementById('comparisonText');
+            if (footprint < 4) {
+                comparisonText.textContent = "This is below the global average of 4 tons per person. Great job!";
+            } else if (footprint < 8) {
+                comparisonText.textContent = "This is close to the global average of 4 tons per person. There's room for improvement.";
+            } else {
+                comparisonText.textContent = "This is above the global average of 4 tons per person. Consider ways to reduce your footprint.";
+            }
+            
+            // Add recommendations
+            const recommendations = document.getElementById('recommendations');
+            recommendations.innerHTML = "<h5>Ways to reduce your carbon footprint:</h5><ul>" +
+                "<li>Use public transportation or carpool when possible</li>" +
+                "<li>Switch to energy-efficient appliances</li>" +
+                "<li>Reduce meat consumption</li>" +
+                "<li>Choose direct flights when traveling</li>" +
+                "</ul>";
+        });
+    </script>
+</body>
+</html>
